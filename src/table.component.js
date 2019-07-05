@@ -1,7 +1,7 @@
-import React, { createContext } from "react";
-import { Input } from "./shared/inputs";
+import React, { createContext } from 'react'
+// import { Input } from './shared/inputs';
 
-export const TableContext = createContext();
+export const TableContext = createContext()
 
 const Row = ({ row }) => (
   <TableContext.Consumer>
@@ -9,7 +9,7 @@ const Row = ({ row }) => (
       columns.map((field, i) => <td key={i}>{row[field.name]}</td>)
     }
   </TableContext.Consumer>
-);
+)
 
 const EditRow = ({ row }) => (
   <TableContext.Consumer>
@@ -28,7 +28,7 @@ const EditRow = ({ row }) => (
       ))
     }
   </TableContext.Consumer>
-);
+)
 
 export const Body = () => (
   <TableContext.Consumer>
@@ -42,7 +42,7 @@ export const Body = () => (
       </tbody>
     )}
   </TableContext.Consumer>
-);
+)
 
 export const Header = () => (
   <TableContext.Consumer>
@@ -52,6 +52,6 @@ export const Header = () => (
       </thead>
     )}
   </TableContext.Consumer>
-);
+)
 
-export const Table = ({ children }) => <table>{children}</table>;
+export const Table = ({ children }) => <table>{children}</table>
